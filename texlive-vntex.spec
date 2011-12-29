@@ -18,9 +18,7 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
+
 Requires(post):	texlive-tetex
 
 %description
@@ -30,24 +28,12 @@ fonts (in both Metafont and Adobe Type 1 format) of this bundle
 may alternatively use the lm fonts bundle, for which map files
 are available to provide a Vietnamese version.
 
-%pre
-    %_texmf_updmap_pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-    %_texmf_updmap_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_updmap_pre
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
-	%_texmf_updmap_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -646,7 +632,6 @@ are available to provide a Vietnamese version.
 %doc %{_texmfdistdir}/source/generic/vntex/tests/vntopia-test.tex
 %doc %{_texmfdistdir}/source/generic/vntex/vntex.dtx
 %doc %{_texmfdistdir}/source/generic/vntex/vntex.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -657,8 +642,6 @@ are available to provide a Vietnamese version.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_updmap_d}
 cat > %{buildroot}%{_texmf_updmap_d}/vntex <<EOF
 Map arevvn.map
