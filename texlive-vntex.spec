@@ -655,3 +655,16 @@ MixedMap vnrother.map
 MixedMap vnrtext.map
 Map vntopia.map
 EOF
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.2-2
++ Revision: 757477
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.2-1
++ Revision: 719893
+- texlive-vntex
+- texlive-vntex
+- texlive-vntex
+
