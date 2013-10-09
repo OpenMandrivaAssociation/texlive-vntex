@@ -1,12 +1,12 @@
-# revision 22766
+# revision 30579
 # category Package
 # catalog-ctan /language/vietnamese/vntex
-# catalog-date 2011-04-12 14:45:36 +0200
+# catalog-date 2013-05-19 14:33:40 +0200
 # catalog-license other-free
 # catalog-version 3.2
 Name:		texlive-vntex
 Version:	3.2
-Release:	2
+Release:	3
 Summary:	Support for Vietnamese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/vietnamese/vntex
@@ -18,7 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-
 Requires(post):	texlive-tetex
 
 %description
@@ -522,9 +521,7 @@ are available to provide a Vietnamese version.
 %{_texmfdistdir}/tex/latex/vntex/t5uzcm.fd
 %{_texmfdistdir}/tex/latex/vntex/tcvn.def
 %{_texmfdistdir}/tex/latex/vntex/varioref-vi.sty
-%{_texmfdistdir}/tex/latex/vntex/vietnam.ldf
 %{_texmfdistdir}/tex/latex/vntex/vietnam.sty
-%{_texmfdistdir}/tex/latex/vntex/vietnamese.ldf
 %{_texmfdistdir}/tex/latex/vntex/viscii.def
 %{_texmfdistdir}/tex/latex/vntex/vncaps.tex
 %{_texmfdistdir}/tex/latex/vntex/vntex.sty
@@ -551,7 +548,6 @@ are available to provide a Vietnamese version.
 %doc %{_texmfdistdir}/source/generic/vntex/LPPL.txt
 %doc %{_texmfdistdir}/source/generic/vntex/Makefile
 %doc %{_texmfdistdir}/source/generic/vntex/README.vntopia
-%doc %{_texmfdistdir}/source/generic/vntex/babel-vi.dtx
 %doc %{_texmfdistdir}/source/generic/vntex/doc/ReleaseNotes.tex
 %doc %{_texmfdistdir}/source/generic/vntex/doc/abbr.tex
 %doc %{_texmfdistdir}/source/generic/vntex/doc/test-accents.tex
@@ -655,16 +651,3 @@ MixedMap vnrother.map
 MixedMap vnrtext.map
 Map vntopia.map
 EOF
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.2-2
-+ Revision: 757477
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.2-1
-+ Revision: 719893
-- texlive-vntex
-- texlive-vntex
-- texlive-vntex
-
