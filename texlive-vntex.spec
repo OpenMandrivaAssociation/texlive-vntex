@@ -6,7 +6,7 @@
 # catalog-version 3.2
 Name:		texlive-vntex
 Version:	3.2
-Release:	10
+Release:	11
 Summary:	Support for Vietnamese
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/language/vietnamese/vntex
