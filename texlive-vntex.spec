@@ -3,7 +3,7 @@ Version:	62837
 Release:	2
 Summary:	Support for Vietnamese
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/language/vietnamese/vntex
+URL:		https://www.ctan.org/tex-archive/language/vietnamese/vntex
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/vntex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/vntex.doc.r%{version}.tar.xz
